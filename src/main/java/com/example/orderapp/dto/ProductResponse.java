@@ -1,4 +1,8 @@
 package com.example.orderapp.dto;
 
-public record ProductResponse() {
+public record ProductResponse(
+        String name,
+        String description,
+        double price
+) {
 }

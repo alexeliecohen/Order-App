@@ -1,7 +1,9 @@
-package com.example.orderapp;
+package com.example.orderapp.controller;
 
+import com.github.javafaker.Faker;
 import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.BeforeEach;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.DynamicPropertyRegistry;
@@ -16,8 +18,7 @@ public abstract class IntegrationTest {
     @LocalServerPort
     protected int port;
     protected String uri;
-//    @Autowired
-//    protected TestData testData;
+    protected Faker faker = new Faker();
 
     @Container
     public static PostgreSQLContainer<?> postgreSQL =

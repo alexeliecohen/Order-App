@@ -3,7 +3,7 @@ package com.example.orderapp.dto;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
-public record ProductRequest(
+public record CreateProductRequest(
         @NotBlank
         String name,
 
